@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { PostsIndex } from "./PostsIndex";
 import { PostsNew } from "./PostsNew";
+import { PostsIndex } from "./PostsIndex";
+import { Modal } from "./Modal";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
+
   const handleIndexPosts = () => {
     console.log('in handle index posts');
     // make my web request to api to get data from rails app
@@ -19,6 +21,9 @@ export function Content() {
     <div>
       <PostsNew />
       <PostsIndex posts={posts} />
+      <Modal show={true}>
+        <p>I am a modal</p>
+      </Modal>
     </div>
   );
 }

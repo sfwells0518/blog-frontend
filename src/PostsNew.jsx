@@ -1,6 +1,7 @@
 export function PostsNew() {
   return (
     <div id="posts-new">
+
       <h1>New post</h1>
       <form>
         <div>
@@ -15,6 +16,7 @@ export function PostsNew() {
 
         <button type="submit">Create Post</button>
       </form>
+      
     </div>
   );
 }
