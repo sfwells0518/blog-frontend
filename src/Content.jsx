@@ -6,6 +6,7 @@ import { Modal } from "./Modal";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
+  const [isPostsShowVisible, setIsPostsShowVisible] = useState(false);
 
   const handleIndexPosts = () => {
     console.log('in handle index posts');
@@ -17,11 +18,19 @@ export function Content() {
 
   useEffect(handleIndexPosts, []);
 
+  const handleShowPost = () => {
+    setIsPostsShowVisible(true);
+  };
+
+  const handleClose = () => {
+    setIsPostsShowVisible(false);
+  };
+
   return (
     <div>
       <PostsNew />
-      <PostsIndex posts={posts} />
-      <Modal show={true}>
+      <PostsIndex posts={posts} onShowPost={handleShowPost} />
+      <Modal show={isPostsShowVisible} onClose={handleClose}>
         <p>I am a modal</p>
       </Modal>
     </div>
