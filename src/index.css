@@ -1,7 +1,13 @@
 #posts-index img {
-  width: 300px;
+  width: 250px;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+#root {
+  font-family: Lucida Bright;
+  background-image: url('./assets/white_wall_hash.webp');
+  
 }
