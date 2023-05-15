@@ -6,4 +6,4 @@ export function PostsShow(props) {
       <p><b>created at:</b> {props.post.created_at}</p>
     </div>
   );
-};
+}
