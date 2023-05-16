@@ -32,12 +32,20 @@ export function Content() {
     setIsPostsShowVisible(false);
   };
 
+  const handleCreatePost = (params) => {
+    axios.post("http://localhost:3000/posts.json", params).then((response) => {
+      console.log(response.data);
+      // take everything thats in posts and add response.data
+      setPosts([...posts, response.data]);
+    });
+  }
+
   return (
     <div className="container">
       <Signup />
       <Login />
       <LogoutLink />
-      <PostsNew />
+      <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} />
