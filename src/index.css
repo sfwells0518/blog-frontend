@@ -11,3 +11,37 @@ html {
   background-image: url('./assets/white_wall_hash.webp');
   
 }
+
+.navbar {
+  background-color: rgb(218, 218, 218);
+}
+
+#posts-new .form-control {
+  font-size: 14px;
+  padding: 8px 12px;
+  width: 250px;
+}
+
+#posts-new .form-control-large {
+  height: 200px;
+  resize: vertical;
+}
+
+#posts-new {
+  margin-top: 20px;
+  
+}
+
+#posts-index .card-body-custom {
+  height: 500px;
+  margin-bottom: 150px; 
+  padding-bottom: 75px;
+  padding-top: 50px;
+}
+
+#posts-new .bordered-form {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 2px;
+  width: 275px;
+}
