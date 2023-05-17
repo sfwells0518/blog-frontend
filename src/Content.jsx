@@ -50,6 +50,7 @@ export function Content() {
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} />
       </Modal>
+      
     </div>
   );
 }
