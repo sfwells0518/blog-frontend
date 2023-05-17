@@ -6,9 +6,8 @@ export function PostsShow(props) {
     event.preventDefault();
     
     const params = new FormData(event.target);
-    axios.patch(`http://localhost:3000/posts/${props.post.id}.json`, params).then(response => {
-    console.log(response.data);
-    })
+    props.onUpdatePost(props.post.id, params)
+
   
     //update dynamic post
     // pre-fill the form

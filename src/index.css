@@ -7,7 +7,7 @@ html {
 }
 
 #root {
-  font-family: Lucida Bright;
+  font-family: Futura-light;
   background-image: url('./assets/white_wall_hash.webp');
   
 }
@@ -33,10 +33,16 @@ html {
 }
 
 #posts-index .card-body-custom {
-  height: 500px;
-  margin-bottom: 150px; 
-  padding-bottom: 75px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 75px; 
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 #posts-new .bordered-form {
@@ -44,4 +50,29 @@ html {
   padding: 10px;
   border-radius: 2px;
   width: 275px;
+}
+
+#posts-index .red-button {
+  background-color: rgb(255, 90, 95);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  width: 135px;
+}
+
+#posts-index .card-body-custom .card-text {
+  flex-grow: 1;
+  height: 100px;
+  /* adjust this value as needed */
+  overflow: auto;
+}
+
+#posts-index img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
 }
