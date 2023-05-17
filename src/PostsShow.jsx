@@ -8,11 +8,12 @@ export function PostsShow(props) {
     const params = new FormData(event.target);
     props.onUpdatePost(props.post.id, params)
 
-  
-    //update dynamic post
-    // pre-fill the form
-    // update the data in posts without page refresh
-}
+  }
+
+  const handleDestroyPost = () => {
+    props.onDestroyPost(props.post.id);
+  };
+
   console.log(props.post) 
   return (
     <div>
@@ -27,6 +28,8 @@ export function PostsShow(props) {
         <p>Image: <input name="image" type="text" defaultValue={props.post.image} /></p>
         <p><button type="input">Update Post</button></p>
       </form>
+      <br></br>
+      <button onClick={handleDestroyPost}>Delete Post</button>
     </div>
   );
 }
