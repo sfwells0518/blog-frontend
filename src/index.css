@@ -36,13 +36,14 @@ html {
   text-align: center;
   position: relative;
   width: 100%;
-  margin-bottom: 75px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Changed from 'center' to 'flex-start' */
   align-items: center;
-  
 }
 
 #posts-new .bordered-form {
@@ -64,11 +65,14 @@ html {
   width: 135px;
 }
 
-#posts-index .card-body-custom .card-text {
+#posts-index .card-text-custom {
   flex-grow: 1;
   height: 100px;
-  /* adjust this value as needed */
-  overflow: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #posts-index img {
@@ -76,3 +80,4 @@ html {
   height: 200px;
   object-fit: cover;
 }
+

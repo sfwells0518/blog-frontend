@@ -7,10 +7,10 @@ export function PostsIndex(props) {
       </center>
       <div className="row">
         {props.posts.map((post) => (
-          <div key={post.id} className="col-sm-6 mb-3 mb-sm-0">
+          <div key={post.id} className="col-sm-4 mb-3">
             <div className="card h-100">
               <div className="card-body card-body-custom d-flex flex-column">
-                <h4 className="card-title">{post.title}</h4>
+                <h5 className="card-title">{post.title}</h5>
                 <img
                   src={
                     post.image ||
@@ -20,7 +20,7 @@ export function PostsIndex(props) {
                   className="mb-3"
                 />
                 <br></br>
-                <p className="card-text">{post.body}</p>
+                <p className="card-text card-text-custom">{post.body}</p>
                   <div className="mt-auto text-center">
                     <button
                       className="red-button"

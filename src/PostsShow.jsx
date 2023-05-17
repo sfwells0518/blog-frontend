@@ -1,4 +1,3 @@
-import axios from "axios";
 
 export function PostsShow(props) {
   const handleSubmit = (event) => {
@@ -8,7 +7,7 @@ export function PostsShow(props) {
     const params = new FormData(event.target);
     props.onUpdatePost(props.post.id, params)
 
-  }
+  };
 
   const handleDestroyPost = () => {
     props.onDestroyPost(props.post.id);
